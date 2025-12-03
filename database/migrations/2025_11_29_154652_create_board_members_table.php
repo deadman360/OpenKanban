@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
 
             $table->foreignId('user_id')->constrained('users')->onDelete('cascade');
-            $table->foreignId('board_id')->constrained('board')->onDelete('cascade');
+            $table->foreignId('board_id')->constrained('boards')->onDelete('cascade');
             $table->enum('role', ['member','mod','admin'])->default('member');
             $table->timestamps();
         });

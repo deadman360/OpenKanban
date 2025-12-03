@@ -9,4 +9,9 @@ class BoardMember extends Model
 {
     /** @use HasFactory<\Database\Factories\BoardMemberFactory> */
     use HasFactory;
+
+    protected $fillable = [
+    'board_id',
+    'user_id',
+];
 }
